@@ -21,7 +21,5 @@ The main packages used in the project:
   ```
   
 # video
-https://user-images.githubusercontent.com/39926614/193682101-e34de9f6-ff31-4013-9a94-8fcebbb1925c.mp4
-
-
+https://user-images.githubusercontent.com/39926614/194792441-59213e91-77df-4b42-bb6f-c8385bf8f1c9.mp4
 
