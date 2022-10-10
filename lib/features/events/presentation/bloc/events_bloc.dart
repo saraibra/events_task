@@ -17,13 +17,13 @@ class EventsBloc extends Bloc<EventsEvent, EventsState> {
   int currentPage = 1;
   bool isLastPage = false;
   List<String> datesList = [];
-  List<Event>events=[];
+  List<Event> events = [];
   String currentDate = '';
   DateTime? showedDate;
   EventsBloc(this.getAllEventsUseCase) : super(EventsInitial()) {
     on<EventsEvent>((event, emit) async {
       if (event is GetAllEventsEvent) {
-        events =[];
+        events = [];
         emit(LoadingEventstate());
         String currentDate = DateFormat('ddMMMyyyy').format(DateTime.now());
         showedDate = DateTime.now();
