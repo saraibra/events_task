@@ -36,7 +36,7 @@ class EventCard extends StatelessWidget {
                 Text(
                   DateFormat(
                     'EEEE dd MMM  yyyy . hh:mm a',
-                  ).format(DateTime.parse(event.date!)),
+                  ).format(DateTime.parse(event.date!).toLocal()),
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Text(

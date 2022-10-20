@@ -19,12 +19,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    initializeDateFormatting('ar_EG',null);
+    initializeDateFormatting('ar',null);
     return  MultiBlocProvider(
       providers: [
         BlocProvider(
           create: (context) =>
-              di.sl<EventsBloc>()..add(GetAllEventsEvent())),
+              di.sl<EventsBloc>()),
         
       ],
       child: MaterialApp(

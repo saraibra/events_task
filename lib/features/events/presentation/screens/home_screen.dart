@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:task_app/core/resources/color_manager.dart';
 import 'package:task_app/features/events/presentation/widgets/event_list.dart';
+import 'package:task_app/features/events/presentation/widgets/list.dart';
 
 import '../../../../core/resources/string_manager.dart';
 import '../../../../core/resources/value_manger.dart';
@@ -15,14 +16,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<EventsBloc, EventsState>(
-      builder: (context, state) {
+    
         return Scaffold(
           appBar: AppBar(title: const Text(AppStrings.schedule),
           leading: Icon(Icons.arrow_back_rounded),
           ),
-          body: state is LoadedEventsState
-              ? Padding(
+          body:  Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -104,18 +103,14 @@ class HomeScreen extends StatelessWidget {
                                 ],
                               )),
                           Expanded(
-                              child: EventsList(eventsList: state.event)),
+                              child: EventList()),
                         ],
                       ),
                     ),
                   ),
                 )
-              : Center(
-                  child: CircularProgressIndicator(
-                  color: ColorManager.primary,
-                )),
+             
         );
-      },
-    );
+     
   }
 }
